@@ -39,7 +39,7 @@
 <section class="container mt-5">
   <div class="row">
   <div class="col">
-      <img src="img/renovasi/msjid2.jpg" class="rounded" width="700" height="580">
+      <img src="img/renovasi/msjid2.jpg" class="rounded" width="470" height="580">
     </div>
   <div class="col">
       <h3 class="mb-3">Kunjungan Bobby Nasution Walikota Medan

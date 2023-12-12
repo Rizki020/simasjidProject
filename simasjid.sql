@@ -41,10 +41,7 @@ CREATE TABLE `jadwal` (
 --
 
 INSERT INTO `jadwal` (`id_jadwal`, `waktu`, `tanggal`, `penceramah`, `hari`, `kajian`) VALUES
-(7, '02:32:00', '2022-08-16', 'Fadli Lc.Ma', 'Senin', 'Iman pada hari akhirr'),
-(8, '20:22:00', '2022-08-17', 'Hanna attacik Lc.', 'Selasa', 'Manfaatkan masa muda'),
-(9, '00:30:00', '2022-08-17', 'Ustad Nuar Lc. ', 'Rabu', 'Adab-adab bertaubat'),
-(10, '10:30:00', '2022-08-18', 'Hanna attacik Lc.', 'Kamis', 'Iman pada hari akhirr');
+(21, '14:53:00', '2023-11-28', 'Ustad Abdul', 'Kamis', 'shubuh');
 
 -- --------------------------------------------------------
 
@@ -63,10 +60,8 @@ CREATE TABLE `kajian` (
 --
 
 INSERT INTO `kajian` (`id_kajian`, `nm_kajian`, `nm_ustad`) VALUES
-(23, 'Fikih1', 'Ustad Taufik Lc.MA1'),
-(24, 'Iman pada hari akhirr', 'Fadli Lc.Ma'),
-(25, 'Manfaatkan masa muda', 'Hanna attacik Lc.'),
-(26, 'Adab-adab bertaubat', 'Ustad Nuar Lc. ');
+(34, 'shubuh', 'Ustad Abdul');
+
 
 -- --------------------------------------------------------
 
@@ -86,8 +81,7 @@ CREATE TABLE `kas_keluar` (
 --
 
 INSERT INTO `kas_keluar` (`id_kaskeluar`, `keterangan_k`, `tanggal_k`, `keluar`) VALUES
-(3, 'wesss', '2022-08-16', 40000),
-(4, 'as2222', '2022-09-19', 50000);
+(10, 'Renovasi Atap', '2023-11-28', 9000000);
 
 -- --------------------------------------------------------
 
@@ -97,6 +91,7 @@ INSERT INTO `kas_keluar` (`id_kaskeluar`, `keterangan_k`, `tanggal_k`, `keluar`)
 
 CREATE TABLE `kas_masuk` (
   `id_kasmasuk` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
   `keterangan` varchar(100) NOT NULL,
   `tanggal` date NOT NULL,
   `masuk` int(11) NOT NULL
@@ -106,10 +101,8 @@ CREATE TABLE `kas_masuk` (
 -- Dumping data for table `kas_masuk`
 --
 
-INSERT INTO `kas_masuk` (`id_kasmasuk`, `keterangan`, `tanggal`, `masuk`) VALUES
-(6, 'ess1', '2022-08-09', 110000),
-(7, 'sedekah jariyah', '2022-08-17', 500000),
-(8, 'infak', '2022-08-11', 320000);
+INSERT INTO `kas_masuk` (`id_kasmasuk`, `nama`,`keterangan`, `tanggal`, `masuk`) VALUES
+(19, 'rizki','sedekah', '2023-11-28', 3000000);
 
 -- --------------------------------------------------------
 
@@ -119,10 +112,10 @@ INSERT INTO `kas_masuk` (`id_kasmasuk`, `keterangan`, `tanggal`, `masuk`) VALUES
 
 CREATE TABLE `pengumuman` (
   `id_pengumuman` int(11) NOT NULL,
-  `judul` varchar(40) NOT NULL,
+  `judul` varchar(255) NOT NULL,
   `isi_pengumuman` text,
   `tgl` date NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -130,12 +123,7 @@ CREATE TABLE `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`id_pengumuman`, `judul`, `isi_pengumuman`, `tgl`, `foto`) VALUES
-(7, 'Sholat Hari Raya Idul adha', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, libero enim harum, ex ullam voluptates officiis nostrum dolore cupiditate soluta non optio doloremque beatae! Repellat accusantium laborum laudantium tempore. Omnis beatae provident minima eos temporibus, distinctio commodi? Nesciunt eaque odit veniam corporis minus odio explicabo saepe neque. Hic, similique dolorum.', '2022-08-19', 'k4.jpeg'),
-(9, 'Organisasi Remaja masjid', '\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat distinctio laborum aperiam facere nisi placeat voluptate cupiditate maiores dolore, saepe, odio consectetur sapiente nemo quibusdam praesentium expedita fugit reiciendis nam adipisci totam dicta accusamus veritatis vel fuga! Ipsam pariatur iusto voluptas! Sit rerum odit dolore ipsa alias, earum nisi consequuntur.', '2022-08-20', 'k3.jpeg'),
-(10, 'kegiatan remaja masjid', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, iste. Nostrum exercitationem, cum aspernatur nulla maiores ipsam laboriosam, voluptate vero dolore similique, libero quod harum porro cupiditate eligendi ea rem expedita. Sit ex doloremque, pariatur distinctio minus ipsum? Ratione eligendi perferendis sunt repudiandae officia sapiente voluptatum, pariatur nemo qui numquam quo maxime quam omnis modi in expedita unde, quisquam eaque.', '2022-08-19', 'k1.jpg'),
-(11, 'persatuan remaja masjid', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, iste. Nostrum exercitationem, cum aspernatur nulla maiores ipsam laboriosam, voluptate vero dolore similique, libero quod harum porro cupiditate eligendi ea rem expedita. Sit ex doloremque, pariatur distinctio minus ipsum? Ratione eligendi perferendis sunt repudiandae officia sapiente voluptatum, pariatur nemo qui numquam quo maxime quam omnis modi in expedita unde, quisquam eaque.', '2022-08-20', 'k2.jpeg'),
-(12, 'Lomba azan', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, iste. Nostrum exercitationem, cum aspernatur nulla maiores ipsam laboriosam, voluptate vero dolore similique, libero quod harum porro cupiditate eligendi ea rem expedita. Sit ex doloremque, pariatur distinctio minus ipsum? Ratione eligendi perferendis sunt repudiandae officia sapiente voluptatum, pariatur nemo qui numquam quo maxime quam omnis modi in expedita unde, quisquam eaque.', '2022-08-21', 'k5.png'),
-(13, 'Penyaluran zakat', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, iste. Nostrum exercitationem, cum aspernatur nulla maiores ipsam laboriosam, voluptate vero dolore similique, libero quod harum porro cupiditate eligendi ea rem expedita. Sit ex doloremque, pariatur distinctio minus ipsum? Ratione eligendi perferendis sunt repudiandae officia sapiente voluptatum, pariatur nemo qui numquam quo maxime quam omnis modi in expedita unde, quisquam eaque.', '2022-08-22', 'k6.jpg');
+(18,'mengaji untuk anak anak','','2023-11-28','IMG20231121185317.jpg');
 
 -- --------------------------------------------------------
 
@@ -145,7 +133,7 @@ INSERT INTO `pengumuman` (`id_pengumuman`, `judul`, `isi_pengumuman`, `tgl`, `fo
 
 CREATE TABLE `sarana` (
   `id_sapra` int(11) NOT NULL,
-  `nama_sapra` varchar(25) NOT NULL,
+  `nama_sapra` varchar(255) NOT NULL,
   `foto` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -154,10 +142,11 @@ CREATE TABLE `sarana` (
 --
 
 INSERT INTO `sarana` (`id_sapra`, `nama_sapra`, `foto`) VALUES
-(14, 'Parkiran Masjid al-furqon', 'p1.jpg'),
-(16, 'Tempat Wudhu', 'p2.jpg'),
-(17, 'Tempat Toilet', 'p3.jpg'),
-(18, 'AC mini', 'p4.jpg');
+(14,'parkiran masjid','IMG20231124123655.jpg'),
+(16,'Tempat Wudhu','IMG20231121185406.jpg'),
+(17,'Gudang','IMG20231121185347.jpg'),
+(20,'renovasi atap','rnv3.jpg'),
+(22,'AC','IMG20231121185248.jpg');
 
 -- --------------------------------------------------------
 
@@ -177,25 +166,26 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin`(`id_admin`,`foto`,`username`,`password`) VALUES
-(7,'admin.png','admin','admin');
+(7,'admin.png','admin','1zxa54');
 
 --
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
-  `id_user` int(2) NOT NULL,
+CREATE TABLE `jamaah` (
+  `id_jamaah` int(2) NOT NULL,
+  `nama_jamaah` varchar(255) NOT NULL,
   `foto` varchar(100) NOT NULL,
-  `username` varchar(25) DEFAULT NULL,
-  `password` varchar(25) DEFAULT NULL
+  `Organisasi` varchar(255) Default NULL,
+  `Jabatan` varchar(255) Default Null
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `foto`, `username`, `password`) VALUES
-(8, 'user.png', 'user', 'user');
+INSERT INTO `jamaah` (`id_user`,`nama_jamaah`, `foto`, `organisasi`, `jabatan`) VALUES
+(7,'rizki','Anggota.jpg','remaja masjid','sosial');
 
 --
 -- Indexes for dumped tables
@@ -240,8 +230,8 @@ ALTER TABLE `sarana`
 --
 -- Indexes for table `user`
 --
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+ALTER TABLE `jamaah`
+  ADD PRIMARY KEY (`id_jamaah`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -286,8 +276,8 @@ ALTER TABLE `sarana`
 --
 -- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `user`
-  MODIFY `id_user` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `jamaah`
+  MODIFY `id_jamaah` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
