@@ -169,7 +169,7 @@ INSERT INTO `admin`(`id_admin`,`foto`,`username`,`password`) VALUES
 (7,'admin.png','admin','1zxa54');
 
 --
--- Table structure for table `user`
+-- Table structure for table `jamaah`
 --
 
 CREATE TABLE `jamaah` (
@@ -181,7 +181,7 @@ CREATE TABLE `jamaah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `jamaah`
 --
 
 INSERT INTO `jamaah` (`id_user`,`nama_jamaah`, `foto`, `organisasi`, `jabatan`) VALUES
@@ -228,7 +228,7 @@ ALTER TABLE `sarana`
   ADD PRIMARY KEY (`id_sapra`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `jamaah`
 --
 ALTER TABLE `jamaah`
   ADD PRIMARY KEY (`id_jamaah`);
@@ -274,7 +274,7 @@ ALTER TABLE `sarana`
   MODIFY `id_sapra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `jamaah`
 --
 ALTER TABLE `jamaah`
   MODIFY `id_jamaah` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;

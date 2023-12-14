@@ -79,7 +79,7 @@ if (isset($_POST['login'])) {
                       <button class="btn btn-primary btn-lg btn-block" type="submit" name="login">Login</button>
                       <a href="index.php" class="btn btn-success btn-lg btn-block">Batal</a>
                     </div>
-                    <h7> Login hanya diperuntukkan untuk pengurus/Admin</h7>
+                    <h7 style="color: red;">Login hanya diperuntukkan untuk pengurus/Admin</h7>
               </div>
 
             </div>
