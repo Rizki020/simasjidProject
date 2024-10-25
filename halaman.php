@@ -39,15 +39,16 @@
 <section class="container mt-5">
   <div class="row">
   <div class="col">
-      <img src="img/renovasi/msjid2.jpg" class="rounded" width="500" height="450">
+  <img src="img/renovasi/msjid2.jpg" class="rounded img-fluid" style="max-width: 100%; height: auto;">
+
     </div>
   <div class="col">
       <h3 class="mb-3">Kunjungan Bobby Nasution Walikota Medan
         Di Masjid Nurul Hayat</h2>
-      <p>Seperti yang dilakukan Wali Kota Medan Bobby Nasution saat melakukan Safari Ramadhan di Masjid Nurul Hayat yang terletak dijalan Bunga Ncole XX, Kel. Kemenangan Tani, Kec. Medan Tuntungan, Senin (3/4/2023).</p>
-      <p>Turut hadir dalam Safari Ramadhan mendampingi Wali Kota Medan Bobby Nasution, Kapolrestabes Medan Kombes Pol Valentino Alfa Tatareda, Dandim 0201/Medan Kolonel Inf Ferry Muzawwad, Kepala Kejaksaan Negeri Medan Wahyu Sabrudin, Para Pimpinan OPD dan Plt. Camat Medan Tuntungan Hendra Arjudanto S.IP, M.Si serta Lurah se-Kecamatan Medan Tuntungan. Kehadiran Wali Kota Medan Bobby Nasution disambut hangat oleh Ketua BKM Masjid Nurul Hayat beserta ratusan masyarakat Medan Tuntungan.</p>
-      <p>Seperti biasanya dalam safari Ramadhan ini Pemko Medan menyerahkan hibah untuk pembangunan Masjid sebesar Rp 50 juta. Selanjutnya ada lagi bantuan satu set perlengkapan Tenis Meja, lalu bantuan buku-buku dan rak buku, penyerahan bantuan paket sembako dengan total Rp 10 juta. Selain itu, Wali Kota Medan Bobby Nasution juga menyerahkan sertifikat pendirian koperasi Masjid dan bantuan satu unit gerobak kayu dan dua unit gerobak usaha, serta KTP dan KIA yang sudah selesai pengurusanya dan penyerahan bantuan santunan kepada anak yatim piatu se-Kecamatan Medan Tuntungan yang diserahkan langsung oleh Wali Kota Medan Bobby Nasution.</p>
-      <p>Wali Kota Medan juga mengatakan Pemko Medan mengadakan mudik bersama. Adapun pendaftaran dibuka mulai tanggal 3 – 6 April 2023.</p>
+      <p>Wali Kota Medan Bobby Nasution mengadakan Safari Ramadhan di Masjid Nurul Hayat, Medan Tuntungan pada Senin (3/4/2023).</p>
+      <p>Dengan didampingi oleh Kapolrestabes Medan, Dandim 0201/Medan, Kepala Kejari Medan, pimpinan OPD, dan pejabat kecamatan setempat. </p>
+      <p>Dalam kegiatan ini, Pemko Medan memberikan hibah pembangunan masjid sebesar Rp 50 juta, bantuan perlengkapan tenis meja, buku, rak buku, paket sembako, sertifikat koperasi masjid, gerobak usaha, serta santunan kepada anak yatim piatu. </p>
+      <p>Selain itu, Pemko Medan juga membuka pendaftaran mudik bersama dari tanggal 3 hingga 6 April 2023.</p>
 </script>
     </div>
   </div>

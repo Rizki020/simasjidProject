@@ -8,6 +8,7 @@
     <link href="boostrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="boostrap/css/style.css">
 <title>Masjid Nurul Hayat</title>
+<link rel="icon" type="image/png" href="img/sosial/logomasjid3.png">
 </head>
 <body>
 <!-- navbar -->
@@ -77,50 +78,6 @@ session_start();
   else if($_GET['page'] == 'sarana'){
     include 'frontend/sarana.php';
   }
-    // Form Pembayaran
-// Form Pembayaran
-
-if(isset($_POST['submit_pembayaran'])) {
-  // Proses pengiriman data pembayaran ke database
-  $nma = $_POST['nama'];
-  $jml = $_POST['jumlah'];
-  $ktr = $_POST['keterangan'];
-
-  // Tanggal saat ini
-  $tgl = date('Y-m-d');
-
-  // masukkan data ke tabel kas_masuk
-  $result = $conn->query ("INSERT INTO kas_masuk(nama,keterangan, tanggal, masuk) VALUES ('$nma','$ktr', '$tgl', '$jml')");
-
-  if ($result == TRUE) {
-      echo '<div class="alert alert-success" role="alert">Pembayaran berhasil disubmit dan masuk ke kas masuk!</div>';
-  } else {
-      echo '<div class="alert alert-danger" role="alert">Error: ' . $conn->error . '</div>';
-  }
-}
-if (!isset($_GET['page']) || $_GET['page'] === 'index'){
-  ?>
-  <!-- Form Pembayaran -->
-  <div class="container mt-5">
-      <h2>Anda ingin Berdonasi?</h2>
-      <form method="post" action="">
-          <div class="mb-3">
-              <label for="nama" class="form-label">Nama Pembayar</label>
-              <input type="text" class="form-control" id="nama" name="nama" required>
-          </div>
-          <div class="mb-3">
-              <label for="jumlah" class="form-label">Nominal Pembayaran</label>
-              <input type="int" class="form-control" id="nominal" name= "jumlah" required>
-          </div>
-          <div class="mb-3">
-              <label for="keterangan" class="form-label">Keterangan Pembayaran</label>
-              <textarea class="form-control" id="keterangan" name="keterangan" rows="3" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" name="submit_pembayaran">Submit Pembayaran</button>
-      </form>
-  </div>
-<?php
-}
 ?>
 <!-- konten -->
 
@@ -138,6 +95,11 @@ if (!isset($_GET['page']) || $_GET['page'] === 'index'){
         <p>Jln. Bunga Ncole XIV A Medan Tuntungan</p>
         <p>Tlp. 0838 0941 5317</p>
         <p>Email. rizkikahfi12345@gmail.com</p>
+        <p>Donasi : 
+        <a href="#" onclick="window.open('https://wa.me/6283809415317?text=Halo%20saya%20ingin%20donasi', '_blank'); return false;">
+    <img src="img/sosial/wa.png" width="40" alt="WhatsApp">
+  </a>
+</p>
           <div class="sosial">
           <img src="img/sosial/facebook.png" width="40">
           <img src="img/sosial/instagram.png" width="40">
@@ -147,14 +109,14 @@ if (!isset($_GET['page']) || $_GET['page'] === 'index'){
       </div>
       <!-- batas -->
       <div class="col">
-        <h4>Q.S At-Taubah: 18</h4>
         <p>“Sesungguhnya yang memakmurkan masjid Allah hanyalah orang-orang yang beriman kepada Allah dan hari akhir, serta (tetap) menegakkan shalat, menunaikan zakat dan tidak takut kecuali hanya kepada Allah. Maka mudah-mudahan mereka termasuk orang-orang yang mendapat petunjuk.”</p>
+        <p>Q.S At-Taubah: 18</p>
       </div>
       <!-- batas -->
     </div>
   </div>
   <div class="copy pt-5 text-center">
-    Copyright &copy; 2023 by RizkiKahfi
+    Copyright &copy; 2024 by RizkiKahfi
   </div>
 </footer>
 <!-- about -->

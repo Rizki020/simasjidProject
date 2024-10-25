@@ -59,6 +59,15 @@ if ($page == 'user') {
         }
       </style>
       </head>
+      <script>
+  function confirmLogout(event) {
+    event.preventDefault();
+    const confirmLogout = confirm("Anda yakin ingin keluar dari akun ini?");
+    if (confirmLogout) {
+      window.location.href = "logout.php";
+    }
+  }
+</script>
       <body>
 
         <div class="image">
@@ -141,7 +150,7 @@ if ($page == 'user') {
           </a>
         </li>
         <li class="nav-item">
-          <a href="logout.php" class="nav-link">
+          <a href="#" class="nav-link" onclick="confirmLogout(event)">
             <i class="nav-icon fas fa-power-off"></i>
             <p>
               Logout
