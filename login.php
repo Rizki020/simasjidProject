@@ -71,12 +71,6 @@ if (isset($_POST['login'])) {
                                             <input type="password" id="password" class="form-control form-control-lg"
                                                 name="pass" required />
                                             <label class="form-label" for="password">Password</label>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="showPassword"
-                                                    checked>
-                                                <label class="form-check-label" for="showPassword"
-                                                    onclick="event.preventDefault();">Sembunyikan Password</label>
-                                            </div>
                                         </div>
 
                                         <div class="pt-1 mb-4">

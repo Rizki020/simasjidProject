@@ -26,4 +26,17 @@ footer{
     margin: 0 auto; /* Pusatkan formulir di tengah */
 }
 
+/* Style untuk menampilkan waktu real-time */
+.time-display {
+    color: #ffffff; /* Warna teks putih */
+    font-size: 1rem; /* Ukuran font lebih besar */
+    padding: 10px 15px; /* Ruang di sekitar teks */
+    font-family: 'Arial', sans-serif; /* Font yang lebih modern */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    border-radius: 5px; /* Sudut membulat */
+    display: inline-block; /* Mengatur agar elemen menjadi blok */
+    margin-left: auto; /* Pindah ke kanan */
+  }
+  
+  
   
