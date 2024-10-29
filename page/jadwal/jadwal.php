@@ -23,6 +23,7 @@ if(!isset($_SESSION['username'])){
                      ?>
                 </select>  
             <!-- batas -->
+             
             <label>Waktu</label>
                 <input type="time" name="waktu">   
             <!-- batas --> 

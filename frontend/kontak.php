@@ -8,7 +8,7 @@
         </div>
         <div class="col">
             <h4 class="fw-bold">Alamat :</h4>
-            <p>Jln Bunga Ncole XIV A Lizardi Putra,Kelurahan Kemenangan tani, Kecamatan Medan Tuntungan, Kota Medan – 20136</p>
+            <p>Jln Bunga Ncole XIV A Lizardi Putra,Kelurahan Kemenangan tani Kecamatan Medan Tuntungan, Kota Medan – 20136</p>
             <h4 class="fw-bold mt-5">Peribadatan:</h4>
             <p>0838 0941 5317 (Rizki)</p> 
             <h4 class="fw-bold mt-5">Email:</h4>
