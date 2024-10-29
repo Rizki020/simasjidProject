@@ -64,15 +64,12 @@ if (isset($_POST['login'])) {
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan Login</h5>
                                         <div class="form-outline mb-4">
                                             <input type="text" id="Username" class="form-control form-control-lg"
-                                                autofocus required name="user" />
-                                            <label class="form-label" for="Username">Username</label>
+                                                placeholder="Username" autofocus required name="user" />
                                         </div>
                                         <div class="form-outline mb-4">
                                             <input type="password" id="password" class="form-control form-control-lg"
-                                                name="pass" required />
-                                            <label class="form-label" for="password">Password</label>
+                                                placeholder="Password" name="pass" required />
                                         </div>
-
                                         <div class="pt-1 mb-4">
                                             <button class="btn btn-primary btn-lg btn-block" type="submit"
                                                 name="login">Login</button>
