@@ -45,7 +45,7 @@ if ($page == 'user') {
 <aside class="main-sidebar sidebar-light-success elevation-4">
   <!-- Brand Logo -->
   <a href="#" class="brand-link  text-center">
-    <span class="brand-text font-weight-light text-success font-weight-bold">Nurul Hayat</span>
+    <span class="brand-text font-weight-light text-success font-weight-bold">Dashboard Nurul Hayat</span>
   </a>
 
   <!-- Sidebar -->
