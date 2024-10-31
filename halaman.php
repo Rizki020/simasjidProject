@@ -43,8 +43,7 @@
 
     </div>
   <div class="col">
-      <h3 class="mb-3">Kunjungan Bobby Nasution Walikota Medan
-        Di Masjid Nurul Hayat</h2>
+      <h3 class="mb-3">Kunjungan Bobby Nasution Walikota Medan Di Masjid Nurul Hayat</h2>
       <p>Wali Kota Medan Bobby Nasution mengadakan Safari Ramadhan di Masjid Nurul Hayat, Medan Tuntungan pada Senin (3/4/2023).</p>
       <p>Dengan didampingi oleh Kapolrestabes Medan, Dandim 0201/Medan, Kepala Kejari Medan, pimpinan OPD, dan pejabat kecamatan setempat. </p>
       <p>Dalam kegiatan ini, Pemko Medan memberikan hibah pembangunan masjid sebesar Rp 50 juta, bantuan perlengkapan tenis meja, buku, rak buku, paket sembako, sertifikat koperasi masjid, gerobak usaha, serta santunan kepada anak yatim piatu. </p>
