@@ -37,6 +37,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
               <li><a class="dropdown-item" href="?page=jadwal">Jadwal Kajian</a></li>
               <li><a class="dropdown-item" href="?page=organisasi">Struktur Organisasi BKM</a></li>
+              <li><a class="dropdown-item" href="?page=jadwalazan">Jadwal Azan</a></li>
             </ul>
           </div>
           <!-- batad -->
@@ -77,6 +78,8 @@
     include 'frontend/kegiatan.php';
   } else if ($_GET['page'] == 'sarana') {
     include 'frontend/sarana.php';
+  } else if ($_GET['page'] == 'jadwalazan') {
+    include 'frontend/jadwalazan.php';
   }
   ?>
   <!-- konten -->

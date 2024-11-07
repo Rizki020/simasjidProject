@@ -41,7 +41,7 @@ CREATE TABLE `jadwal` (
 --
 
 INSERT INTO `jadwal` (`id_jadwal`, `waktu`, `tanggal`, `penceramah`, `hari`, `kajian`) VALUES
-(21, '14:53:00', '2023-11-28', 'Ustad Abdul', 'Kamis', 'shubuh');
+(1, '14:53', '2023-11-28', 'Ustad Abdul', 'Kamis', 'shubuh');
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `kajian` (
 --
 
 INSERT INTO `kajian` (`id_kajian`, `nm_kajian`, `nm_ustad`) VALUES
-(34, 'shubuh', 'Ustad Abdul');
+(1, 'shubuh', 'Ustad Abdul');
 
 
 -- --------------------------------------------------------
@@ -81,7 +81,7 @@ CREATE TABLE `kas_keluar` (
 --
 
 INSERT INTO `kas_keluar` (`id_kaskeluar`, `keterangan_k`, `tanggal_k`, `keluar`) VALUES
-(10, 'Renovasi Atap', '2023-11-28', 9000000);
+(1, 'Renovasi Atap', '2023-11-28', 9000000);
 
 -- --------------------------------------------------------
 
@@ -102,7 +102,7 @@ CREATE TABLE `kas_masuk` (
 --
 
 INSERT INTO `kas_masuk` (`id_kasmasuk`, `nama`,`keterangan`, `tanggal`, `masuk`) VALUES
-(19, 'rizki','sedekah', '2023-11-28', 3000000);
+(1, 'rizki','sedekah', '2023-11-28', 3000000);
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`id_pengumuman`, `judul`, `isi_pengumuman`, `tgl`, `foto`) VALUES
-(18,'mengaji untuk anak anak','','2023-11-28','IMG20231121185317.jpg');
+(1,'mengaji untuk anak anak','','2023-11-28','IMG20231121185317.jpg');
 
 -- --------------------------------------------------------
 
@@ -142,11 +142,11 @@ CREATE TABLE `sarana` (
 --
 
 INSERT INTO `sarana` (`id_sapra`, `nama_sapra`, `foto`) VALUES
-(14,'parkiran masjid','IMG20231124123655.jpg'),
-(16,'Tempat Wudhu','IMG20231121185406.jpg'),
-(17,'Gudang','IMG20231121185347.jpg'),
-(20,'renovasi atap','rnv3.jpg'),
-(22,'AC','IMG20231121185248.jpg');
+(1,'parkiran masjid','IMG20231124123655.jpg'),
+(2,'Tempat Wudhu','IMG20231121185406.jpg'),
+(3,'Gudang','IMG20231121185347.jpg'),
+(4,'renovasi atap','rnv3.jpg'),
+(5,'AC','IMG20231121185248.jpg');
 
 -- --------------------------------------------------------
 
@@ -166,7 +166,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin`(`id_admin`,`foto`,`username`,`password`) VALUES
-(7,'admin.png','admin','1zxa54');
+(1,'admin.png','admin','1zxa54');
 
 --
 -- Table structure for table `jamaah`
@@ -184,8 +184,30 @@ CREATE TABLE `jamaah` (
 -- Dumping data for table `jamaah`
 --
 
-INSERT INTO `jamaah` (`id_user`,`nama_jamaah`, `foto`, `organisasi`, `jabatan`) VALUES
-(7,'rizki','Anggota.jpg','remaja masjid','sosial');
+INSERT INTO `jamaah` (`id_jamaah`, `nama_jamaah`, `foto`, `organisasi`, `jabatan`) VALUES
+(1,'rizki','Anggota.jpg','remaja masjid','sosial');
+
+--
+-- Table structure for table `jadwalazan`
+--
+
+CREATE TABLE `jadwalazan` (
+  `id_azan` int(2) NOT NULL,
+  `waktu` varchar(255) NOT NULL,
+  `pukul` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jadwalazan`
+--
+
+INSERT INTO `jadwalazan` (`id_azan`, `waktu`, `pukul`) VALUES
+(1,'Subuh','04:59'),
+(2,'Terbit','06:09'),
+(3,'Dzuhur','12:09'),
+(4,'Asar','15:31'),
+(5,'Maghrib','18:09'),
+(6,'Isya','19:18');
 
 --
 -- Indexes for dumped tables
@@ -234,6 +256,12 @@ ALTER TABLE `jamaah`
   ADD PRIMARY KEY (`id_jamaah`);
 
 --
+-- Indexes for table `jadwalazan`
+--
+ALTER TABLE `jadwalazan`
+  ADD PRIMARY KEY (`id_azan`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -272,6 +300,12 @@ ALTER TABLE `pengumuman`
 --
 ALTER TABLE `sarana`
   MODIFY `id_sapra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `jadwalazan`
+--
+ALTER TABLE `jadwalazan`
+  MODIFY `id_azan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `jamaah`

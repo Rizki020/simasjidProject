@@ -35,6 +35,11 @@ if ($page == 'keluar') {
   $master2 = "active";
   $keluar = "active";
 }
+if ($page == 'jadwalazan') {
+  $master1 = "menu-open";
+  $master2 = "active";
+  $jadwalazan = "active";
+}
 if ($page == 'user') {
   $master1 = "menu-open";
   $master2 = "active";
@@ -60,14 +65,15 @@ if ($page == 'user') {
       </style>
       </head>
       <script>
-  function confirmLogout(event) {
-    event.preventDefault();
-    const confirmLogout = confirm("Anda yakin ingin keluar dari akun ini?");
-    if (confirmLogout) {
-      window.location.href = "logout.php";
-    }
-  }
-</script>
+        function confirmLogout(event) {
+          event.preventDefault();
+          const confirmLogout = confirm("Anda yakin ingin keluar dari akun ini?");
+          if (confirmLogout) {
+            window.location.href = "logout.php";
+          }
+        }
+      </script>
+
       <body>
 
         <div class="image">
@@ -146,6 +152,14 @@ if ($page == 'user') {
             <i class="nav-icon fas fa-user-lock"></i>
             <p>
               Jamaah
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="?page=jadwalazan" class="nav-link <?= $jadwalazan; ?>">
+            <i class="nav-icon fas fa-clock"></i>
+            <p>
+              Jadwal Azan
             </p>
           </a>
         </li>
