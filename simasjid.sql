@@ -169,7 +169,27 @@ INSERT INTO `admin`(`id_admin`,`foto`,`username`,`password`) VALUES
 (1,'admin.png','admin','1zxa54');
 
 --
--- Table structure for table `jamaah`
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL, 
+  `no_hp` varchar(12) DEFAULT NULL, 
+  `role` varchar(20) DEFAULT 'jamaah', 
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `users` (`username`, `password`, `no_hp`, `role`) VALUES
+('rizki_jamaah', '123', '081234567890', 'jamaah');
+
+--
+-- Table structure for table `Jamaah`
 --
 
 CREATE TABLE `jamaah` (
@@ -250,6 +270,12 @@ ALTER TABLE `sarana`
   ADD PRIMARY KEY (`id_sapra`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY(`id_user`);
+
+--
 -- Indexes for table `jamaah`
 --
 ALTER TABLE `jamaah`
@@ -301,6 +327,12 @@ ALTER TABLE `pengumuman`
 ALTER TABLE `sarana`
   MODIFY `id_sapra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
+--
+-- AUTO_INCREMENT for table `jadwalazan`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  
 --
 -- AUTO_INCREMENT for table `jadwalazan`
 --

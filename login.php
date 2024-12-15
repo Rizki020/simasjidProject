@@ -1,25 +1,46 @@
 <?php
 include "config/koneksi.php";
 session_start();
-if (isset($_SESSION['username'])) {
-    header('Location: dashboard1.php');
+
+// Jika sudah login, arahkan ke dashboard masing-masing
+if (isset($_SESSION['username']) && isset($_SESSION['role'])) {
+    if ($_SESSION['role'] === 'admin') {
+        header('Location: dashboard1.php'); // Dashboard admin
+    } else {
+        header('Location: dashboardU.php'); // Dashboard user
+    }
     exit;
 }
 
+// Proses login
 if (isset($_POST['login'])) {
     $user = htmlspecialchars($_POST['user']);
     $pass = htmlspecialchars($_POST['pass']);
 
-    $query = $conn->query("SELECT * FROM admin WHERE username = '$user' AND password = '$pass'");
-
-    if ($query->num_rows > 0) {
-        $row = mysqli_fetch_assoc($query);
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['foto'] = $row['foto'];
-        header('location: dashboard1.php');
-    } else {
-        echo "<script>alert('Username atau Password Anda Salah. Silahkan Coba Lagi!');</script>";
+    // Login sebagai admin
+    $queryAdmin = $conn->query("SELECT * FROM admin WHERE username = '$user' AND password = '$pass'");
+    if ($queryAdmin->num_rows > 0) {
+        $rowAdmin = mysqli_fetch_assoc($queryAdmin);
+        $_SESSION['username'] = $rowAdmin['username'];
+        $_SESSION['foto'] = $rowAdmin['foto'];
+        $_SESSION['role'] = 'admin'; // Tetap admin
+        header('Location: dashboard1.php'); // Arahkan ke dashboard admin
+        exit;
     }
+
+    // Login sebagai user
+    $queryUser = $conn->query("SELECT * FROM users WHERE username = '$user' AND password = '$pass'");
+    if ($queryUser->num_rows > 0) {
+        $rowUser = mysqli_fetch_assoc($queryUser);
+        $_SESSION['username'] = $rowUser['username'];
+        $_SESSION['foto'] = $rowUser['foto'];
+        $_SESSION['role'] = $rowUser['role']; // Role dari tabel user
+        header('Location: dashboardU.php'); // Arahkan ke dashboard user
+        exit;
+    }
+
+    // Jika gagal login
+    echo "<script>alert('Username atau Password Anda Salah. Silahkan Coba Lagi!');</script>";
 }
 ?>
 

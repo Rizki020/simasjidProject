@@ -68,3 +68,16 @@ else if($_GET['page'] == 'editU') {
 else if($_GET['page'] == 'hapusU') {
     include "page/user/hapusU.php";
 }
+// }jadwal Azan
+else if($_GET['page'] == 'jadwalazan') {
+    include "page/jadwalazan/jadwalazan.php";
+} 
+else if($_GET['page'] == 'tambahazan') {
+    include "page/jadwalazan/tambahazan.php";
+}
+else if($_GET['page'] == 'editazan') {
+    include "page/jadwalazan/editazan.php";
+}
+else if($_GET['page'] == 'hapusazan') {
+    include "page/jadwalazan/hapusazan.php";
+}
